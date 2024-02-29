@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const Home2 = () => {
+const Header = () => {
     const [fontSize, setFontSize] = useState('4.5vw'); // Initial font size for responsive text
     const [buttonFontSize, setButtonFontSize] = useState('2.5vw'); // Initial font size for button
     const [textPosition, setTextPosition] = useState({ top: '30px', left: '10%' }); // Initial text position
@@ -60,4 +60,4 @@ const Home2 = () => {
     );
 };
 
-export default Home2;
+export default Header;
