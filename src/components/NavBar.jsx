@@ -81,8 +81,8 @@ const NavBar = () => {
       </div>
       {/* Move cart and ingresar buttons here */}
       <div className="hidden sm:flex">
-      <button class="relative">
-  <img class="h-6 transition duration-300 transform hover:scale-110" src="src\assets\cart-shopping-solid.svg" alt="" />
+      <button className="relative">
+  <img className="h-6 transition duration-300 transform hover:scale-110" src="src\assets\cart-shopping-solid.svg" alt="" />
 </button>
         <button className="text-white font-bold ml-8 mr-8 border-solid border-2 rounded-2xl p-2 hover:bg-emerald-400">Ingresar</button>
       </div>
