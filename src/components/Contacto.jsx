@@ -1,11 +1,6 @@
 import React, {useState, useMemo} from "react";
 import emailjs from 'emailjs-com';
 import Swal from "sweetalert2";
-import PhoneInput from "react-phone-input-2";
-import "react-phone-input-2/lib/style.css";
-import CountryList from "react-select-country-list";
-import Select from 'react-select';
-import CountryFlag from "react-country-flag";
 import { FaPhoneVolume, FaLocationDot, FaEnvelope } from "react-icons/fa6"
 import { Ripple, initTE } from "tw-elements";
 import { validation } from "./validation.js";
@@ -14,29 +9,20 @@ const Contacto = () => {
   
   initTE({ Ripple });
   
-  const [phoneNumber, setPhoneNumber] = useState("");
-  const [selectedCountry, setSelectedCountry] = useState("");
-  const options = useMemo(() => CountryList().getData(), [])
- 
-  const [form, setForm] = useState({
+  const [errors, setErrors] = useState({ })
+  const [input, setInput] = useState({
     name: "",
+    lastname: "",
     email:  "",
     country: "",
     phone: "",
     message: "",
   });
 
-  const [errors, setErrors] = useState({
-    name: "",
-    email: "", 
-    country: "",
-    phone: "",
-    message: "",
-  })
 
   const handleChange = (e) => {
-    setForm({
-      ...form,
+    setInput({
+      ...input,
         [e.target.name]: e.target.value
     });
     setErrors(
@@ -47,15 +33,6 @@ const Contacto = () => {
     );
   };
 
-  const handlePhoneNumberChange = (value) => {
-    setPhoneNumber(value);
-  };
-
-  const handleCountryChange = (value) => {
-    setSelectedCountry(value); 
-  };
-
-
   const handleSubmit = (e) => {
     e.preventDefault();
       emailjs.sendForm("service_7p64wk7", "template_ml6tpib", e.target, "l7M96__4X3gcfBedn")
@@ -65,17 +42,17 @@ const Contacto = () => {
         // Limpiar el formulario después del envío
         setForm({
           name: "",
+          lastname: "",
           email:  "",
           country: "",
           phone: "",
           message: "",
         });
-        setPhoneNumber(""); // Limpiar el campo de teléfono
-        setSelectedCountry(""); // Limpiar la selección de país
-        }, (error) => {
-          console.log(error.text);
-          showErrorAlert("Hubo un error al enviar el mensaje");
-        });
+      })
+      .catch((error) => {
+        console.log(error.text);
+        showErrorAlert("Hubo un error al enviar el mensaje");
+      });
   };
 
   const handleMapClick = () => {
@@ -104,25 +81,27 @@ const Contacto = () => {
   };
   //---------------------------------------------------------------
   
-
+  //-----------Campos llenos----------------------------------------------------------------------------------------------------------------------
+  
+  const inputLleno = input.name !== '' && input.lastname !== '' && input.email !== '' && input.country !== '' && input.phone !== '' && input.message !== ''
+  
+  //----------------------------------------------------------------------------------------------------------------------------------------------
+  
   return (
 
-  <div id="contactoLink" className="flex flex-col md:flex-row justify-between text-black py-12 pt-8 pb-8 bg-gradient-to-r from-gray-400 to-gray-300">
+  <div id="contactoLink" className="flex flex-col md:flex-row justify-between text-black py-12 pt-8 pb-8 bg-gradient-to-r from-gray-400 to-gray-100">
     
-  
     {/* <!-- Contenedor izquierdo --> */}
   
     <div className="w-full md:w-1/2 relative" >
          
-      <div className="mt-20 flex items-center justify-center">
+      <div className="mt-36 flex items-center justify-center">
         <p className="font-bold text-5xl">Ponete en</p>
         <p className="font-bold text-5xl ml-3 text-green-700">CONTACTO</p>
       </div>
       
-      <div className="mx-auto w-[90%] mt-16 flex flex-row">
-        
-        <div className="w-[20%] flex flex-col justify-end items-end">
-        
+      <div className="mx-auto w-[90%] mt-16 flex flex-row">        
+        <div className="w-[20%] flex flex-col justify-end items-end">  
           <a onClick={handleMapClick} rel="noreferrer">
             <FaLocationDot className="h-12 w-12 text-green-700 hover:text-orange-600 transition-transform hover:scale-125 duration-500 cursor-pointer mt-2 mb-20" />
           </a> 
@@ -133,8 +112,7 @@ const Contacto = () => {
 
           <a href="mailto:staff.healthstyle@hotmail.com" target="_blank" rel="noreferrer">
             <FaEnvelope className="h-12 w-12 text-green-700 hover:text-orange-600 transition-transform hover:scale-125 duration-500 scursor-pointer"/>
-          </a>  
-        
+          </a>   
         </div>
 
         <div className="w-[80%]">
@@ -146,106 +124,106 @@ const Contacto = () => {
           <br/>  <br/>
           <p className="text-left text-2xl ml-[8%]">Email: staff.healthstyle@hotmail.com</p>
         </div> 
-
       </div>
+  
     </div>
  
     {/* <!-- Contenedor derecho --> */}
   
-  <div className="w-full md:w-1/2 relative">
+    <div className="w-full md:w-1/2 relative">
       
-      {/* <div className="text-white relative">   */}
-    
-        <form onSubmit={handleSubmit} className="w-full space-y-4">
+      <form onSubmit={handleSubmit} className="w-full space-y-4 mt-[8%]">
         
-        <div className="w-[90%] mx-auto mt-8 ">
-          <label htmlFor="name" className="flex block text-base font-bold text-black">
-            Nombre y Apellido
-          </label>
-          <input
-            type="text"
-            name="name"
-            id="name"
-            value={form.name}
-            onChange={handleChange}
-            autoComplete="name"
-            required
-            className="mt-1 p-2 border-2 border-green-500 rounded-md w-full focus:outline-none focus:border-green-500"
-            style={{
-              color: "black",
-              WebkitBoxShadow: "0 0 0 1000px white inset", // Anula el color del autocompletado
-              WebkitTextFillColor: "black",
-            }}
-          />
-            
-              <span className="text-red-800 hover:text-red-700">{errors.name}</span>
-            
-
+        <div className="w-[90%] mx-auto flex"> 
+          <div className="w-[50%]">
+            <label htmlFor="name" className="flex italic block text-base font-bold text-black">
+              Nombre
+            </label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              value={input.name}
+              onChange={handleChange}
+              placeholder="Nombre"
+              required
+              autocomplete="nope"
+              className={`flex mt-1 p-2 border-b-4 text-lg text-black italic border-green-500 bg-transparent placeholder-gray-500 w-[95%] focus:outline-none ${errors.name ? 'border-red-700' : 'border-green-500'}`}             
+            />
+              {errors.name && <span className="text-red-800">{errors.name}</span>}
+          </div>  
+              
+          <div className="w-[50%] mx-auto">
+            <label htmlFor="lastname" className="flex italic block text-base font-bold text-black">
+              Apellido
+            </label>
+            <input
+              type="text"
+              name="lastname"
+              id="lastname"
+              value={input.lastname}
+              onChange={handleChange}
+              placeholder="Apellido"
+              required
+              autocomplete="nope"
+              className={`mt-1 p-2 border-b-4 text-lg text-black italic border-green-500 bg-transparent placeholder-gray-500 w-full focus:outline-none ${errors.lastname ? 'border-red-700' : 'border-green-500'}`}             
+            />
+              {errors.lastname && <span className="text-red-800">{errors.lastname}</span>}
+          </div>  
         </div>
-        
+
         <div className="w-[90%] mx-auto">
           <label htmlFor="email" className="flex block text-base font-bold text-black">
             Email
           </label>
           <input
-            type="email"
+            type="text"
             name="email"
             id="email"
-            value={form.email}
+            value={input.email}
             onChange={handleChange}
-            autoComplete="email"
+            placeholder="Ingrese su email - Ej.: email@mail.com"
             required
-            className="mt-1 p-2 border-2 border-green-500 rounded-md w-full text-black text-black bg-white focus:outline-none focus:border-green-500"
-            style={{
-              color: "black",
-              WebkitBoxShadow: "0 0 0 1000px white inset", // Anula el color del autocompletado
-              WebkitTextFillColor: "black",
-            }}
-          />
+            autocomplete="nope"
+            className={`mt-1 p-2 border-b-4 text-lg text-black italic border-green-500 bg-transparent placeholder-gray-500 w-full focus:outline-none ${errors.email ? 'border-red-700' : 'border-green-500'}`}             
+            />
+            {errors.email && <span className="text-red-800">{errors.email}</span>}
         </div>
         
         <div className="w-[90%] mx-auto">
           <label htmlFor="country" className="flex block text-base font-bold text-black">
             País de Residencia
           </label>          
-          <Select
-            name="country"
+          <input
             type="text"
+            name="country"
             id="country"
-            options={CountryList().getData().map(option => ({
-              ...option, icon: 
-                <CountryFlag countryCode={option.value} svg />,
-            }))}
-            value={selectedCountry}
-            onChange={handleCountryChange}
-            autoComplete="country"
+            value={input.country}
+            onChange={handleChange}
+            placeholder="Ej.: Argentina"
             required
-            className="mt-1 border-2 border-green-500 rounded-md w-full bg-white text-black focus:outline-none focus:border-green-500"
-            isSearchable
-            formatOptionLabel={({ icon, label }) => (
-              <div className="flex items-center text-black">
-                <div>{icon}</div>
-                  <div className="ml-2">{label}</div>
-              </div>
-            )}
-          />
+            autoComplete="nope"
+            className="mt-1 p-2 border-b-4 text-lg text-black italic border-green-500 bg-transparent placeholder-gray-500 w-full focus:outline-none focus:border-green-500"
+            />
+            {errors.country && <span className="text-red-800">{errors.country}</span>}
         </div>
 
         <div className="w-[90%] mx-auto">
           <label htmlFor="phone" className="flex block text-base font-bold text-black">
             Número de teléfono
           </label>
-          <PhoneInput
-            country={'ar'}
+          <input
             type="text"
             name="phone"
             id="phone"
-            value={phoneNumber}
-            onChange={handlePhoneNumberChange}
-            autoComplete="phone"
+            value={input.phone}
+            onChange={handleChange}
+            placeholder="Ej.: +54 011 444-3345"
             required
-            className="flex w-[100%] h-auto mt-1 border-2 border-green-500 rounded-md font-bold bg-white text-black text-base focus:outline-none focus:border-green-500"
-          />
+            autoComplete="nope"
+            className="mt-1 p-2 border-b-4 text-lg text-black italic border-green-500 bg-transparent placeholder-gray-500 w-full focus:outline-none focus:border-green-500"
+            />
+            {errors.phone && <span className="text-red-800">{errors.phone}</span>}
         </div>
 
         <div className="w-[90%] mx-auto">
@@ -256,29 +234,33 @@ const Contacto = () => {
             id="message"
             name="message"
             rows="4"
-            value={form.message}
+            value={input.message}
             onChange={handleChange}
+            placeholder="Hacenos llegar tu mensaje"
             required
-            className="mt-1 p-2 border-2 border-green-500 rounded-md bg-white text-black w-full focus:outline-none focus:border-green-500"
-            
+            autocomplete="nope"
+            className="mt-1 p-2 border-b-4 text-lg text-black italic border-green-500 bg-transparent placeholder-gray-500 w-full focus:outline-none focus:border-green-500"
           ></textarea>
+            {errors.message && <span className="text-red-800">{errors.message}</span>}
         </div>
        
         <div className="w-[90%] mx-auto">
-          
-          
           <button
             type="submit"
-            className="mb-4 block w-full bg-green-700 hover:bg-green-800 text-white font-bold py-2 px-4 rounded"
-          >Enviar
+            className={`mb-4 mt-8 block w-full text-white font-bold py-3 px-4 rounded ${Object.values(errors).some(error => error !== "") || !inputLleno ? "bg-gray-400 cursor-not-allowed" : "bg-green-600 hover:bg-green-800"}`}
+            disabled={Object.values(errors).some(error => error !== "") || !inputLleno}
+            title={Object.values(errors).some(error => error !== "") ? Object.values(errors).join(", ") : !inputLleno ? "Por favor, completa todos los campos correctamente" : ""}
+            style={{
+              boxShadow: "4px 4px 8px 0 rgba(0, 0, 0, 0.5), 10px 2px 4px 1px rgba(0, 0, 0, 0.06)"
+            }}
+            >ENVIAR
           </button>
-        
-        
         </div>  
                 
       </form>
-      </div>
-      {/* </div>    */}
+
+    </div>
+
     <button
       type="submit"
       onClick={() => window.open("https://wa.me/+5492915032061")}
@@ -297,7 +279,6 @@ const Contacto = () => {
     </button>
 
   </div>
-  
   
   );
     
