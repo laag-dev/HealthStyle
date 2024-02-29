@@ -1,4 +1,4 @@
-import React, {useState, useMemo} from "react";
+import React, {useState} from "react";
 import emailjs from 'emailjs-com';
 import Swal from "sweetalert2";
 import { FaPhoneVolume, FaLocationDot, FaEnvelope } from "react-icons/fa6"
