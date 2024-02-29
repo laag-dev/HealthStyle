@@ -10,8 +10,8 @@ const Home =  () => {
 
   return (
     <div >
-      <MainHeader/>
-      <Home2/>
+      <NavBar/>
+      <Header/>
       <Service/>
       <Testimonios/>
       <Contacto/>
