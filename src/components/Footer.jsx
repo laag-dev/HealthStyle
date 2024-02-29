@@ -1,31 +1,43 @@
-import '@fortawesome/fontawesome-free/css/all.css';
+import { FaTwitter, FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 
 const Footer = () => {
-  return (
-    <footer className="text-white py-12">
-      <div className="container mx-auto">
-        <div className="flex flex-wrap justify-between">
-          <div className="w-full md:w-1/2">
-            <h3 className="text-xl font-bold mb-4">Contacto</h3>
-            <p>Dirección: Calle Principal, Ciudad, País</p>
-            <p>Email: staff.healthstyle@hotmail.com</p>
-            <p>Teléfono: +123456788</p>
-          </div>
-          <div className="w-full md:w-1/2">
-            <h3 className="text-xl font-bold mb-4">Síguenos en redes sociales</h3>
-            <ul className="flex justify-center items-center space-x-4">
-              <li><a href="#" className="text-white"><i className="fab fa-facebook-f"></i></a></li>
-              <li><a href="#" className="text-white"><i className="fab fa-instagram"></i></a></li>
-              <li><a href="#" className="text-white"><i className="fab fa-twitter"></i></a></li>
-              <li><a href="#" className="text-white"><i className="fab fa-youtube"></i></a></li>
-            </ul>
-          </div>
-        </div>
-        <div className="mt-8">
-          <p className="text-center">&copy; 2024 HealthStyle | Todos los derechos reservados</p>
-        </div>
+  return (       
+    <div className="w-full bg-gray-800">
+          
+      <div className="p-3 w-full text-lg ">
+        <span className="text-gray-500">|</span>
+          <a className="ml-3 text-green-500 hover:text-white" href="#HomeLink">Home</a>
+        <span className="ml-3 text-gray-500">|</span>
+          <a className="ml-3 text-green-500 hover:text-white" href="#">Arrepentimiento de Servicios</a>
+        <span className="ml-3 text-gray-500">|</span>
+          <a className="ml-3 text-green-500 hover:text-white" href="#testimonioLink">Testimonios</a>
+        <span className="ml-3 text-gray-500">|</span>
+          <a className="ml-3 text-green-500 hover:text-white" href="#contactoLink">Contacto</a>
+        <span className="ml-3 text-gray-500">|</span>
+          <a className="ml-3 text-green-500 hover:text-white" href="#">Nosotros</a>
+        <span className="ml-3 text-gray-500">|</span>
       </div>
-    </footer>
+          
+      <div className="w-full p-3 mb-2 flex justify-center text-gray-400">
+        <a href="https://www.twitter.com/" target="_blank" rel="noreferrer">
+          <FaTwitter className="h-12 w-12 hover:text-blue-500 transition-transform hover:scale-125 duration-500" />
+        </a>
+        <a href="https://www.facebook.com/" target="_blank" rel="noreferrer">
+          <FaFacebook className="h-12 w-12 ml-6 hover:text-blue-700 transition-transform hover:scale-125 duration-500" />
+        </a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noreferrer">
+          <FaInstagram className="h-12 w-12 ml-6 hover:text-pink-500 transition-transform hover:scale-125 duration-500" />
+        </a>
+        <a href="https://www.youtube.com/" target="_blank" rel="noreferrer">
+          <FaYoutube className="h-12 w-12 ml-6 hover:text-[red] transition-transform hover:scale-125 duration-500" />
+        </a>
+      </div>
+   
+      <div className="w-full p-3 bg-gray-900">
+        <p className="items-center text-white">&copy; 2024 HealthStyle | Todos los derechos reservados</p>
+      </div>
+      
+    </div> 
   );
 };
 
