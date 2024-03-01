@@ -1,4 +1,4 @@
-import React, {useState, useMemo} from "react";
+import React, {useState} from "react";
 import emailjs from 'emailjs-com';
 import Swal from "sweetalert2";
 import { FaPhoneVolume, FaLocationDot, FaEnvelope } from "react-icons/fa6"
@@ -81,11 +81,9 @@ const Contacto = () => {
   };
   //---------------------------------------------------------------
   
-  //-----------Campos llenos----------------------------------------------------------------------------------------------------------------------
-  
-  const inputLleno = input.name !== '' && input.lastname !== '' && input.email !== '' && input.country !== '' && input.phone !== '' && input.message !== ''
-  
-  //----------------------------------------------------------------------------------------------------------------------------------------------
+  //-----------Campos llenos--------------------------------------------------------------------------------------------------------------------------------
+  const inputLleno = input.name !== '' && input.lastname !== '' && input.email !== '' && input.country !== '' && input.phone !== '' && input.message !== '';
+  //--------------------------------------------------------------------------------------------------------------------------------------------------------
   
   return (
 
@@ -116,13 +114,13 @@ const Contacto = () => {
         </div>
 
         <div className="w-[80%]">
-          <p className="text-left text-2xl ml-[8%]">Dirección: Av. Malvinas Argentinas 1982</p>
-          <p className="text-left text-2xl ml-[8%]">CABA - Provincia de Buenos Aires</p>
-          <p className="text-left text-2xl ml-[8%]">Argentina</p>
+          <p className="text-left text-2xl ml-[4%]">Dirección: Av. Malvinas Argentinas 1982</p>
+          <p className="text-left text-2xl ml-[4%]">CABA - Provincia de Buenos Aires</p>
+          <p className="text-left text-2xl ml-[4%]">Argentina</p>
           <br/>  <br/>
-          <p className="text-left text-2xl ml-[8%]">Tel.: +54 11 4762 3434</p>
+          <p className="text-left text-2xl ml-[4%]">Tel.: +54 11 4762 3434</p>
           <br/>  <br/>
-          <p className="text-left text-2xl ml-[8%]">Email: staff.healthstyle@hotmail.com</p>
+          <p className="text-left text-2xl ml-[4%]">Email: staff.healthstyle@hotmail.com</p>
         </div> 
       </div>
   
@@ -266,7 +264,7 @@ const Contacto = () => {
       onClick={() => window.open("https://wa.me/+5492915032061")}
       // data-te-ripple-init
       data-te-ripple-color="light"
-      className=" fixed bottom-0 right-3 flex bg-green-500 mb-10 rounded-full p-5 text-white hover:bg-green-800 cursor-pointer inline-block animate-bounce "
+      className="z-50 fixed bottom-0 right-3 flex bg-green-500 mb-10 rounded-full p-5 text-white hover:bg-green-800 cursor-pointer inline-block animate-bounce "
       >
       <svg
         xmlns="http://www.w3.org/2000/svg"

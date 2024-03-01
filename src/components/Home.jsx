@@ -5,6 +5,7 @@ import Contacto from "./Contacto";
 import { Service } from "./Service";
 import Header from "./Header";
 import Testimonios from "./Testimonios/Testimonios";
+import AboutUs from "./AboutUs";
 
 const Home =  () => {
 
@@ -12,6 +13,7 @@ const Home =  () => {
     <div >
       <NavBar/>
       <Header/>
+      <AboutUs/>
       <Service/>
       <Testimonios/>
       <Contacto/>
