@@ -5,14 +5,16 @@ import Contacto from "./Contacto";
 import { Service } from "./Service";
 import Header from "./Header";
 import Testimonios from "./Testimonios/Testimonios";
+import Nosotros from "./Nosotros";
 
 const Home =  () => {
 
   return (
     <div >
-      <MainHeader/>
-      <Home2/>
+      <NavBar/>
+      <Header/>
       <Service/>
+      <Nosotros/>
       <Testimonios/>
       <Contacto/>
       <Footer/>
