@@ -264,8 +264,9 @@ const Contacto = () => {
       onClick={() => window.open("https://wa.me/+5492915032061")}
       // data-te-ripple-init
       data-te-ripple-color="light"
-      className="z-50 fixed bottom-0 right-3 flex bg-green-500 mb-10 rounded-full p-5 text-white hover:bg-green-800 cursor-pointer inline-block animate-bounce "
-      >
+      className="z-50 fixed bottom-3 md:bottom-0 right-3 md:right-3 lg:right-6 xl:right-10 flex bg-green-500 mb-10 rounded-full p-5 text-white hover:bg-green-800 cursor-pointer inline-block animate-bounce "
+>
+
       <svg
         xmlns="http://www.w3.org/2000/svg"
         className="h-14 w-14"
