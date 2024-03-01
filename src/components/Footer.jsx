@@ -6,11 +6,11 @@ const Footer = () => {
           
       <div className="p-3 w-full text-lg ">
         <span className="text-gray-500">|</span>
-          <a className="ml-3 text-green-500 hover:text-white" href="#HomeLink">Home</a>
+          <a className="ml-3 text-green-500 hover:text-white" href="#">Home</a>
         <span className="ml-3 text-gray-500">|</span>
           <a className="ml-3 text-green-500 hover:text-white" href="#">Arrepentimiento de Servicios</a>
         <span className="ml-3 text-gray-500">|</span>
-          <a className="ml-3 text-green-500 hover:text-white" href="#testimonioLink">Testimonios</a>
+          <a className="ml-3 text-green-500 hover:text-white" href="#">Testimonios</a>
         <span className="ml-3 text-gray-500">|</span>
           <a className="ml-3 text-green-500 hover:text-white" href="#contactoLink">Contacto</a>
         <span className="ml-3 text-gray-500">|</span>
