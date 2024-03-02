@@ -147,7 +147,7 @@ const Contacto = () => {
               onChange={handleChange}
               placeholder="Nombre"
               required
-              autocomplete="nope"
+              autoComplete="nope"
               className={`flex mt-1 p-2 border-b-4 text-lg text-black italic border-green-500 bg-transparent placeholder-gray-500 w-[95%] focus:outline-none ${errors.name ? 'border-red-700' : 'border-green-500'}`}             
             />
               {errors.name && <span className="text-red-800">{errors.name}</span>}
@@ -165,7 +165,7 @@ const Contacto = () => {
               onChange={handleChange}
               placeholder="Apellido"
               required
-              autocomplete="nope"
+              autoComplete="nope"
               className={`mt-1 p-2 border-b-4 text-lg text-black italic border-green-500 bg-transparent placeholder-gray-500 w-full focus:outline-none ${errors.lastname ? 'border-red-700' : 'border-green-500'}`}             
             />
               {errors.lastname && <span className="text-red-800">{errors.lastname}</span>}
@@ -184,7 +184,7 @@ const Contacto = () => {
             onChange={handleChange}
             placeholder="Ingrese su email - Ej.: email@mail.com"
             required
-            autocomplete="nope"
+            autoComplete="nope"
             className={`mt-1 p-2 border-b-4 text-lg text-black italic border-green-500 bg-transparent placeholder-gray-500 w-full focus:outline-none ${errors.email ? 'border-red-700' : 'border-green-500'}`}             
             />
             {errors.email && <span className="text-red-800">{errors.email}</span>}
@@ -238,7 +238,7 @@ const Contacto = () => {
             onChange={handleChange}
             placeholder="Hacenos llegar tu mensaje"
             required
-            autocomplete="nope"
+            autoComplete="nope"
             className="mt-1 p-2 border-b-4 text-lg text-black italic border-green-500 bg-transparent placeholder-gray-500 w-full focus:outline-none focus:border-green-500"
           ></textarea>
             {errors.message && <span className="text-red-800">{errors.message}</span>}
