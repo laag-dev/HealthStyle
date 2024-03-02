@@ -1,7 +1,7 @@
 import "../index.css";
 import { useState, useEffect } from "react";
 
-const MainHeader = () => {
+const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -26,7 +26,7 @@ const MainHeader = () => {
     <header className="bg-emerald-500 sm:flex sm:justify-between sm:px-4 sm:py-3 sm:items-center">
       <div className="flex items-center justify-between px-4 py-3 sm:p-0" >
         <div>
-          <img className="h-10 pl-8" src="src\assets\healthstyleLogo.svg" alt="Healthstyle"></img>
+          <img className="h-10 pl-8" src="public/healthstyleLogo.svg" alt="Healthstyle"></img>
         </div>
         <div className="sm:hidden">
           <button type="button" onClick={toggleMenu}>
@@ -81,8 +81,8 @@ const MainHeader = () => {
       </div>
       {/* Move cart and ingresar buttons here */}
       <div className="hidden sm:flex">
-      <button class="relative">
-  <img class="h-6 transition duration-300 transform hover:scale-110" src="src\assets\cart-shopping-solid.svg" alt="" />
+      <button className="relative">
+  <img className="h-6 transition duration-300 transform hover:scale-110" src="src\assets\cart-shopping-solid.svg" alt="" />
 </button>
         <button className="text-white font-bold ml-8 mr-8 border-solid border-2 rounded-2xl p-2 hover:bg-emerald-400">Ingresar</button>
       </div>
@@ -90,4 +90,4 @@ const MainHeader = () => {
   );
 };
 
-export default MainHeader;
+export default NavBar;

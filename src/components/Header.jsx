@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import header from "../assets/header.jpg"
 
-const Home2 = () => {
+const Header = () => {
     const [fontSize, setFontSize] = useState('4.5vw'); // Initial font size for responsive text
     const [buttonFontSize, setButtonFontSize] = useState('2.5vw'); // Initial font size for button
     const [textPosition, setTextPosition] = useState({ top: '30px', left: '10%' }); // Initial text position
@@ -46,7 +47,9 @@ const Home2 = () => {
 
     return (
         <div style={{ position: 'relative', height: '600px' }} className="w-full">
-            <img src="src\assets\home2.jpg" alt="Your image" className="w-full object-scale-down" />
+
+            <img src={header} alt="Your image" className="w-full object-scale-down" />
+
             <div className="absolute" style={{ ...textPosition, color: 'white', textAlign: 'center' }}>
                 <div>
                     <h1 style={{ fontSize }} className="font-bold text-emerald-500">Alcanza tu</h1>
@@ -60,4 +63,4 @@ const Home2 = () => {
     );
 };
 
-export default Home2;
+export default Header;
