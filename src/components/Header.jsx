@@ -47,7 +47,9 @@ const Header = () => {
 
     return (
         <div style={{ position: 'relative', height: '600px' }} className="w-full">
+
             <img src={header} alt="Your image" className="w-full object-scale-down" />
+
             <div className="absolute" style={{ ...textPosition, color: 'white', textAlign: 'center' }}>
                 <div>
                     <h1 style={{ fontSize }} className="font-bold text-emerald-500">Alcanza tu</h1>
