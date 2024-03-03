@@ -32,10 +32,16 @@ const Header = () => {
         };
     }, []);
 
+    const imageStyle = window.innerWidth >= 1024 ? { 
+        objectFit: 'cover', 
+        objectPosition: 'center bottom', 
+        height: 'calc(100% + 1000px)' // Adjust the crop amount here
+    } : {};
+
     return (
-        <div className="relative w-full sm:pb-64">
-            <div className="w-full h-auto">
-                <img src={header} alt="Your image" className="w-full h-auto mb-[-10%] sm:mb-[-20%] md:mb-[-25%] lg:mb-[-30%] xl:mb-[-35%]" />
+        <div className="relative w-full sm:pb-64" style={{ height: "500px" }}> {/* Adjust the height here */}
+            <div className="w-full h-auto overflow-hidden">
+                <img src={header} alt="Your image" style={imageStyle} />
             </div>
             <div className="absolute top-0 left-0 text-white text-left p-5 md:p-10">
                 <div className="max-w-[45%]">
