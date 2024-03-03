@@ -1,5 +1,7 @@
 import "../index.css";
 import { useState, useEffect } from "react";
+import burgerMenu from "../assets/burgerMenu.svg";
+import healthstyleLogo from "../assets/healthstyleLogo.svg"
 
 const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -26,11 +28,11 @@ const NavBar = () => {
     <header className="bg-emerald-500 sm:flex sm:justify-between sm:px-4 sm:py-3 sm:items-center">
       <div className="flex items-center justify-between px-4 py-3 sm:p-0" >
         <div>
-          <img className="h-10 pl-8" src="public/healthstyleLogo.svg" alt="Healthstyle"></img>
+          <img className="h-10 pl-8" src={healthstyleLogo} alt="Healthstyle"></img>
         </div>
         <div className="sm:hidden">
           <button type="button" onClick={toggleMenu}>
-            <img className="h-6" src="src\assets\burgerMenu.svg" alt="" />
+            <img className="h-6" src={burgerMenu} alt="" />
           </button>
         </div>
       </div>
