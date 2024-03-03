@@ -7,6 +7,7 @@ import Header from "./Header";
 import Testimonios from "./Testimonios/Testimonios";
 import Nosotros from "./Nosotros";
 import AboutUs from "./AboutUs";
+import Plans from "./Plans";
 
 
 const Home =  () => {
@@ -19,8 +20,10 @@ const Home =  () => {
       <Service/>
       <Nosotros/>
       <Testimonios/>
+      <Plans/>
       <Contacto/>
       <Footer/>
+      
 
       <button
       type="submit"
