@@ -22,7 +22,7 @@ const Planes = (props) => {
 
 function Plans() {
   return(
-    <dir className="flex flex-col ">
+    <div id="costosLink" className="flex flex-col ">
 
 
       <div className="container mx-auto px-8 text-center">
@@ -48,7 +48,7 @@ function Plans() {
     
 
 
-    </dir>
+    </div>
   )
 }
 

@@ -8,7 +8,7 @@ const Nosotros = () => {
 
   return (
   
-  <div className="p-6 mx-auto bg-gray-800"> {/* -- Contenedor general -- */}
+  <div id="nosotrosLink" className="p-6 mx-auto bg-gray-800"> {/* -- Contenedor general -- */}
       
     <section className="container mx-auto mb-2 text-center"> {/* -- Section: Bloques -- */}
     

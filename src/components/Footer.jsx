@@ -8,13 +8,13 @@ const Footer = () => {
         <span className="text-gray-500">|</span>
           <a className="ml-3 text-green-500 hover:text-white" href="#">Home</a>
         <span className="ml-3 text-gray-500">|</span>
-          <a className="ml-3 text-green-500 hover:text-white" href="#">Arrepentimiento de Servicios</a>
+          <a className="ml-3 text-green-500 hover:text-white" href="#costosLink">Costos de Servicios</a>
         <span className="ml-3 text-gray-500">|</span>
-          <a className="ml-3 text-green-500 hover:text-white" href="#">Testimonios</a>
+          <a className="ml-3 text-green-500 hover:text-white" href="#testimonioLink">Testimonios</a>
         <span className="ml-3 text-gray-500">|</span>
           <a className="ml-3 text-green-500 hover:text-white" href="#contactoLink">Contacto</a>
         <span className="ml-3 text-gray-500">|</span>
-          <a className="ml-3 text-green-500 hover:text-white" href="#">Nosotros</a>
+          <a className="ml-3 text-green-500 hover:text-white" href="#nosotrosLink">Nosotros</a>
         <span className="ml-3 text-gray-500">|</span>
       </div>
           
