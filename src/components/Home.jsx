@@ -23,7 +23,6 @@ const Home =  () => {
       <AboutUs/>
       <Service/>
       <Result/>
-      <Nosotros/>
       <Testimonios/>
       <Plans/>
       <Contacto/>

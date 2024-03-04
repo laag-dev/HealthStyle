@@ -11,7 +11,7 @@ const Planes = ({titulo, precio, plan, loren,boton}) => {
       <span className='text-[45px] font-bold '>{precio }</span>
       <h3 className='text-[30px]'>{plan }</h3>
       <p className='text-center text-[15px]'>{loren || 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo tempora nisi'}</p>
-      <button className='bg-[red] rounded-md w-[100px] h-[30px] m-4'>{boton}</button>
+      <button className='bg-[red] hover:bg-black rounded-md w-[100px] h-[30px] m-4 '  >{boton}</button>
 
     </div>
   
