@@ -17,9 +17,9 @@ const Home =  () => {
       <Header/>
       <AboutUs/>
       <Service/>
-      <Nosotros/>
       <Testimonios/>
       <Contacto/>
+      <Nosotros/>
       <Footer/>
 
       <button
