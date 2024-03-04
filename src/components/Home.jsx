@@ -7,6 +7,8 @@ import Header from "./Header";
 import Testimonios from "./Testimonios/Testimonios";
 import Nosotros from "./Nosotros";
 import AboutUs from "./AboutUs";
+import Result from "./Result";
+
 
 
 const Home =  () => {
@@ -17,6 +19,7 @@ const Home =  () => {
       <Header/>
       <AboutUs/>
       <Service/>
+      <Result/>
       <Nosotros/>
       <Testimonios/>
       <Contacto/>
