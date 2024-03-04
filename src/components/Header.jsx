@@ -2,60 +2,80 @@ import React, { useState, useEffect } from 'react';
 import header from "../assets/header.jpg";
 
 const Header = () => {
-    const [buttonPosition, setButtonPosition] = useState({}); 
+    const [buttonPosition, setButtonPosition] = useState({});
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
     const calculateButtonPosition = () => {
-        if (window.innerWidth <= 450) { 
-            return {
-                position: 'relative',
-                top: '-120px',
-                left: '180px',
-                fontSize: '0.6rem',
-                padding: '0.5rem 1rem'
-            };
+        if (windowWidth <= 450) {
+            if (windowWidth <= 400 && windowWidth >= 320) {
+                return {
+                    position: 'relative',
+                    top: '200px', // Adjust the positive value to move the button downward
+                    left: '100px',
+                    fontSize: '0.6rem',
+                    padding: '0.5rem 1rem'
+                };
+            } else {
+                return {
+                    position: 'relative',
+                    top: '-120px',
+                    left: '180px',
+                    fontSize: '0.6rem',
+                    padding: '0.5rem 1rem'
+                };
+            }
         } else {
             return {};
         }
     };
+    
 
     useEffect(() => {
         const handleResize = () => {
-            setButtonPosition(calculateButtonPosition());
+            setWindowWidth(window.innerWidth);
         };
 
         window.addEventListener('resize', handleResize);
-
-        setButtonPosition(calculateButtonPosition());
 
         return () => {
             window.removeEventListener('resize', handleResize);
         };
     }, []);
 
-    const imageStyle = window.innerWidth >= 1024 ? { 
-        objectFit: 'cover', 
-        objectPosition: 'center bottom', 
-        height: 'calc(100% + 1000px)' // Adjust the crop amount here
-    } : {};
+    useEffect(() => {
+        setButtonPosition(calculateButtonPosition());
+    }, [windowWidth]);
+
+    const imageStyle = {
+        objectFit: 'cover',
+        objectPosition: 'center bottom',
+        width: '100%',
+        height: 'auto'
+    };
+
+    const containerStyle = {
+        height: windowWidth >= 1024 ? 'calc(100% + 1000px)' : 'auto', // Adjust the crop amount here
+        maxHeight: '550px', // Adjust the maximum height here
+        overflow: 'hidden',
+        position: 'relative'
+    };
 
     return (
-        <div className="relative w-full sm:pb-64" style={{ height: "500px" }}> {/* Adjust the height here */}
-            <div className="w-full h-auto overflow-hidden">
-                <img src={header} alt="Your image" style={imageStyle} />
-            </div>
+        <div style={containerStyle}>
+            <img src={header} alt="Your image" style={imageStyle} />
             <div className="absolute top-0 left-0 text-white text-left p-5 md:p-10">
                 <div className="max-w-[45%]">
-                    <h1 className={`text-xl sm:text-2xl md:text-4xl font-bold text-emerald-500 mb-4 sm:w-30vw md:w-30vw lg:w-30vw xl:w-30vw ${window.innerWidth <= 450 ? 'mt-[-15%] sm:mt-[-7%]' : ''} ${window.innerWidth > 768 ? 'lg:text-5xl' : ''}`}>
+                    <h1 className={`text-xl sm:text-2xl md:text-4xl font-bold text-emerald-500 mb-4 sm:w-30vw md:w-30vw lg:w-30vw xl:w-30vw ${windowWidth <= 450 ? 'mt-[-15%] sm:mt-[-7%]' : ''} ${windowWidth > 768 ? 'lg:text-5xl' : ''}`}>
                         Alcanza tu mejor versión
                     </h1>
                 </div>
-                <div className={`mb-4 max-w-[35%] overflow-hidden ${window.innerWidth <= 450 ? 'mt-[-5%] sm:mt-[-3%]' : ''}`}>
+                <div className={`mb-4 max-w-[35%] overflow-hidden ${windowWidth <= 450 ? 'mt-[-5%] sm:mt-[-3%]' : ''}`}>
                     <p className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-lg text-gray-700 leading-[1.2] sm:text-xs">
                         ¿Listo para superarte? Descubre cómo alcanzar tu máximo potencial{' '}
-                        y lograr tus objetivos. 
-                    </p>                    
+                        y lograr tus objetivos.
+                    </p>
                 </div>
-                <button style={{...buttonPosition, marginBottom: window.innerWidth <= 450 ? '30px' : '0'}} className="bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2 px-4 sm:py-3 sm:px-6 md:py-3 md:px-8 lg:py-4 lg:px-10 xl:py-5 xl:px-12 rounded text-xs sm:text-sm lg:text-lg">
+                <button style={{ ...buttonPosition, marginBottom: windowWidth <= 450 ? '30px' : '0' }} className="bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2 px-4 sm:py-3 sm:px-6 md:py-3 md:px-8 lg:py-4 lg:px-10 xl:py-5 xl:px-12 rounded text-xs sm:text-sm lg:text-lg">
                     Empezar ahora
                 </button>
             </div>
