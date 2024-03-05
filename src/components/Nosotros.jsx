@@ -13,7 +13,7 @@ const Nosotros = () => {
     <section className="container mx-auto mb-2 text-center"> {/* -- Section: Bloques -- */}
     
       <h2 className="mb-12 text-3xl text-white ">
-        Equipo de desarrollo <span className="text-green-700 font-bold">WEB</span>
+        Equipo de desarrollo <span className="text-[#3E9278] font-bold">WEB</span>
       </h2>
 
       <div className="lg:gap-xl-12 grid gap-x-6 md:grid-cols-2 lg:grid-cols-5"> {/* -- Contenedor equipo -- */}
