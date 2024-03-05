@@ -57,7 +57,7 @@ const Header = () => {
                 </h1>
             </div>
             <div style={paragraphStyle}>
-                <p className="text-gray-800 sm:text-sm  md:text-xl lg:text-2xl lg:ml-6 xl:text-2xl mb-6 xl:ml-12  ">
+                <p className="text-gray-800 sm:text-sm sm:ml-6  md:text-xl md:ml-1 lg:text-2xl lg:ml-6 xl:text-2xl mb-6 xl:ml-12  ">
                     <span>¿Listo para superarte?</span>
                     <br />
                     <span>Descubre cómo alcanzar </span>
@@ -66,7 +66,7 @@ const Header = () => {
                     <br />
                     <span>y lograr tus objetivos.</span>
                     </p>
-                <button className="  text-xs md:text-sm xl:text-2xl xl:ml-14 xl:mt-20  xl:px-8 lg:ml-14 sm:ml-12 lg:text-2xl md:ml-14 bg-emerald-500  hover:bg-emerald-700 text-white font-bold py-2 px-2 rounded" style={buttonStyle}>Comenzar ahora</button>
+                <button className="  text-xs md:text-sm xl:text-2xl xl:ml-14  xl:px-8 lg:ml-14 sm:ml-12 lg:text-2xl md:ml-14 bg-emerald-500  hover:bg-emerald-700 text-white font-bold py-2 px-2 rounded" style={buttonStyle}>Comenzar ahora</button>
             </div>
         </div>
     );
