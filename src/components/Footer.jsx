@@ -6,15 +6,15 @@ const Footer = () => {
           
       <div className="p-3 w-full lg:text-lg xs:text-ms flex flex-wrap justify-center">
         <span className="text-gray-500">|</span>
-          <a className="ml-3 text-green-500 hover:text-white" href="#">Home</a>
+          <a className="ml-3 text-[#3E9278] hover:text-white" href="#">Home</a>
         <span className="ml-3 text-gray-500">|</span>
-          <a className="ml-3 text-green-500 hover:text-white" href="#costosLink">Costos de Servicios</a>
+          <a className="ml-3 text-[#3E9278] hover:text-white" href="#costosLink">Costos de Servicios</a>
         <span className="ml-3 text-gray-500">|</span>
-          <a className="ml-3 text-green-500 hover:text-white" href="#testimonioLink">Testimonios</a>
+          <a className="ml-3 text-[#3E9278] hover:text-white" href="#testimonioLink">Testimonios</a>
         <span className="ml-3 text-gray-500">|</span>
-          <a className="ml-3 text-green-500 hover:text-white" href="#contactoLink">Contacto</a>
+          <a className="ml-3 text-[#3E9278] hover:text-white" href="#contactoLink">Contacto</a>
         <span className="ml-3 text-gray-500">|</span>
-          <a className="ml-3 text-green-500 hover:text-white" href="#nosotrosLink">Nosotros</a>
+          <a className="ml-3 text-[#3E9278] hover:text-white" href="#nosotrosLink">Nosotros</a>
         <span className="ml-3 text-gray-500">|</span>
       </div>
           
