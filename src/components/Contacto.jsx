@@ -94,28 +94,28 @@ const Contacto = () => {
          
       <div className="xs:mt-6 md:mt-28 lg:mt-32 xl:mt-36 flex items-center justify-center">
         <p className="font-bold xs:text-2xl xsm:text-[28px] xsl:text-[32px] sm:text-5xl md:text-[26px] lg:text-4xl xl:text-[50px] 2xl:text-5xl">Ponete en</p>
-        <p className="font-bold xs:text-2xl xsm:text-[28px] xsl:text-[32px] sm:text-5xl md:text-[26px] lg:text-4xl xl:text-[50px] 2xl:text-5xl ml-3 text-green-700">CONTACTO</p>
+        <p className="font-bold xs:text-2xl xsm:text-[28px] xsl:text-[32px] sm:text-5xl md:text-[26px] lg:text-4xl xl:text-[50px] 2xl:text-5xl ml-3 text-[#216651]">CONTACTO</p>
       </div>
       
       <div className="mx-auto w-[90%] xs:mt-8 xl:mt-16 flex flex-row">        
         <div className="w-[20%] flex flex-col xs:justify-center xs:items-center xl:justify-center xl:items-center 2xl:justify-end 2xl:items-end">  
           <a onClick={handleMapClick} rel="noreferrer">
             <FaLocationDot className="xs:h-6 xs:w-6 sm:h-8 sm:w-8 md:h-8 md:w-8 xl:h-12 xl:w-12 
-            text-green-700 hover:text-orange-600 transition-transform hover:scale-125 duration-500 cursor-pointer 
+            text-[#216651] hover:text-orange-600 transition-transform hover:scale-125 duration-500 cursor-pointer 
             xs:mt-2  xsm:mt-2  xsl:mt-2  sm:mt-4  md:mt-2 lg:mt-2 xl:mt-2 
             xs:mb-28 xsm:mb-24 xsl:mb-16 sm:mb-16 md:mb-22 lg:mb-22 xl:mb-20" />
           </a> 
                  
           <a href="tel:+5492915032061" target="_blank" rel="noreferrer">
             <FaPhoneVolume className="xs:h-6 xs:w-6 sm:h-8 sm:w-8 md:h-8 md:w-8 xl:h-12 xl:w-12 
-            text-green-700 hover:text-orange-600 transition-transform hover:scale-125 duration-500 cursor-pointer 
+            text-[#216651] hover:text-orange-600 transition-transform hover:scale-125 duration-500 cursor-pointer 
             xs:mt-0 xsm:mt-4 xsl:mt-2 sm:mt-12 md:mt-14 lg:mt-10 xl:mt-2
             xs:mb-8 xsm:mb-8 xsl:mb-8 sm:mb-4 md:mb-10 lg:mb-8 xl:mb-6"/>
           </a>  
 
           <a href="mailto:staff.healthstyle@hotmail.com" target="_blank" rel="noreferrer">
             <FaEnvelope className="xs:h-6 xs:w-6 sm:h-8 sm:w-8 md:h-8 md:w-8 xl:h-12 xl:w-12 
-            text-green-700 hover:text-orange-600 transition-transform hover:scale-125 duration-500 scursor-pointer"/>
+            text-[#216651] hover:text-orange-600 transition-transform hover:scale-125 duration-500 scursor-pointer"/>
           </a>   
         </div>
 
@@ -161,8 +161,8 @@ const Contacto = () => {
               required
 
               autoComplete="nope"
-              className={`flex mt-1 p-2 border-b-4 text-black italic border-green-500 bg-transparent placeholder-gray-500 w-[95%] focus:outline-none 
-              xs:text-xs xsm:text-base xsl:text-base sm:text-base md:text-base lg:text-base xl:text-base  ${errors.name ? 'border-red-700' : 'border-green-500'}`}             
+              className={`flex mt-1 p-2 border-b-4 text-black italic border-[#216651] bg-transparent placeholder-gray-500 w-[95%] focus:outline-none 
+              xs:text-xs xsm:text-base xsl:text-base sm:text-base md:text-base lg:text-base xl:text-base  ${errors.name ? 'border-red-700' : 'border-[#216651]'}`}             
  
             />
               {errors.name && <span className="text-red-800">{errors.name}</span>}
@@ -184,8 +184,8 @@ const Contacto = () => {
               required
 
               autoComplete="nope"
-              className={`mt-1 p-2 border-b-4 text-black italic border-green-500 bg-transparent placeholder-gray-500 w-full focus:outline-none
-              xs:text-xs xsm:text-base xsl:text-base sm:text-base md:text-base lg:text-base xl:text-base ${errors.lastname ? 'border-red-700' : 'border-green-500'}`}             
+              className={`mt-1 p-2 border-b-4 text-black italic border-[#216651] bg-transparent placeholder-gray-500 w-full focus:outline-none
+              xs:text-xs xsm:text-base xsl:text-base sm:text-base md:text-base lg:text-base xl:text-base ${errors.lastname ? 'border-red-700' : 'border-[#216651]'}`}             
 
             />
               {errors.lastname && <span className="text-red-800">{errors.lastname}</span>}
@@ -207,8 +207,8 @@ const Contacto = () => {
             required
 
             autoComplete="nope"
-            className={`mt-1 p-2 border-b-4 text-black italic border-green-500 bg-transparent placeholder-gray-500 w-full focus:outline-none
-            xs:text-xs xsm:text-base xsl:text-base sm:text-base md:text-base lg:text-base xl:text-base ${errors.email ? 'border-red-700' : 'border-green-500'}`}             
+            className={`mt-1 p-2 border-b-4 text-black italic border-[#216651] bg-transparent placeholder-gray-500 w-full focus:outline-none
+            xs:text-xs xsm:text-base xsl:text-base sm:text-base md:text-base lg:text-base xl:text-base ${errors.email ? 'border-red-700' : 'border-[#216651]'}`}             
 
             />
             {errors.email && <span className="text-red-800">{errors.email}</span>}
@@ -228,8 +228,8 @@ const Contacto = () => {
             placeholder="Ej.: Argentina"
             required
             autoComplete="nope"
-            className={`mt-1 p-2 border-b-4 text-black italic border-green-500 bg-transparent placeholder-gray-500 w-full focus:outline-none 
-            xs:text-xs xsm:text-base xsl:text-base sm:text-base md:text-base lg:text-base xl:text-base ${errors.country ? 'border-red-700' : 'border-green-500'}`}
+            className={`mt-1 p-2 border-b-4 text-black italic border-[#216651] bg-transparent placeholder-gray-500 w-full focus:outline-none 
+            xs:text-xs xsm:text-base xsl:text-base sm:text-base md:text-base lg:text-base xl:text-base ${errors.country ? 'border-red-700' : 'border-[#216651]'}`}
             />
             {errors.country && <span className="text-red-800">{errors.country}</span>}
         </div>
@@ -248,8 +248,8 @@ const Contacto = () => {
             placeholder="Ej.: +54 011 444-3345"
             required
             autoComplete="nope"
-            className={`mt-1 p-2 border-b-4 text-lg text-black italic border-green-500 bg-transparent placeholder-gray-500 w-full focus:outline-none 
-            xs:text-xs xsm:text-base xsl:text-base sm:text-base md:text-base lg:text-base xl:text-base ${errors.phone ? 'border-red-700' : 'border-green-500'}`}
+            className={`mt-1 p-2 border-b-4 text-lg text-black italic border-[#216651] bg-transparent placeholder-gray-500 w-full focus:outline-none 
+            xs:text-xs xsm:text-base xsl:text-base sm:text-base md:text-base lg:text-base xl:text-base ${errors.phone ? 'border-red-700' : 'border-[#216651]'}`}
             />
             {errors.phone && <span className="text-red-800">{errors.phone}</span>}
         </div>
@@ -269,8 +269,8 @@ const Contacto = () => {
             required
 
             autoComplete="nope"
-            className={`mt-1 p-2 border-b-4 text-lg text-black italic border-green-500 bg-transparent placeholder-gray-500 w-full focus:outline-none 
-            xs:text-xs xsm:text-base xsl:text-base sm:text-base md:text-base lg:text-base xl:text-base ${errors.message ? 'border-red-700' : 'border-green-500'}`}
+            className={`mt-1 p-2 border-b-4 text-lg text-black italic border-[#216651] bg-transparent placeholder-gray-500 w-full focus:outline-none 
+            xs:text-xs xsm:text-base xsl:text-base sm:text-base md:text-base lg:text-base xl:text-base ${errors.message ? 'border-red-700' : 'border-[#216651]'}`}
 ></textarea>
             {errors.message && <span className="text-red-800">{errors.message}</span>}
         </div>
@@ -278,7 +278,7 @@ const Contacto = () => {
         <div className="w-[90%] mx-auto">
           <button
             type="submit"
-            className={`mb-4 mt-8 block w-full text-white font-bold py-3 px-4 rounded ${Object.values(errors).some(error => error !== "") || !inputLleno ? "bg-gray-400 cursor-not-allowed" : "bg-green-600 hover:bg-green-800"}`}
+            className={`mb-4 mt-8 block w-full text-white font-bold py-3 px-4 rounded ${Object.values(errors).some(error => error !== "") || !inputLleno ? "bg-gray-400 cursor-not-allowed" : "bg-[#216651] hover:bg-[#3E9278]"}`}
             disabled={Object.values(errors).some(error => error !== "") || !inputLleno}
             title={Object.values(errors).some(error => error !== "") ? Object.values(errors).join(", ") : !inputLleno ? "Por favor, completa todos los campos correctamente" : ""}
             style={{
