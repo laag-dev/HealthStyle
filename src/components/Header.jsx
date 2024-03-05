@@ -1,50 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import header from "../assets/header.jpg";
 
+
+
+
 const Header = () => {
-    const [buttonPosition, setButtonPosition] = useState({});
-    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-
-    const calculateButtonPosition = () => {
-        if (windowWidth <= 450) {
-            if (windowWidth <= 400 && windowWidth >= 320) {
-                return {
-                    position: 'relative',
-                    top: '200px', // Adjust the positive value to move the button downward
-                    left: '100px',
-                    fontSize: '0.6rem',
-                    padding: '0.5rem 1rem'
-                };
-            } else {
-                return {
-                    position: 'relative',
-                    top: '-120px',
-                    left: '180px',
-                    fontSize: '0.6rem',
-                    padding: '0.5rem 1rem'
-                };
-            }
-        } else {
-            return {};
-        }
-    };
-    
-
-    useEffect(() => {
-        const handleResize = () => {
-            setWindowWidth(window.innerWidth);
-        };
-
-        window.addEventListener('resize', handleResize);
-
-        return () => {
-            window.removeEventListener('resize', handleResize);
-        };
-    }, []);
-
-    useEffect(() => {
-        setButtonPosition(calculateButtonPosition());
-    }, [windowWidth]);
 
     const imageStyle = {
         objectFit: 'cover',
@@ -54,30 +14,59 @@ const Header = () => {
     };
 
     const containerStyle = {
-        height: windowWidth >= 1024 ? 'calc(100% + 1000px)' : 'auto', // Adjust the crop amount here
+        position: 'relative',
         maxHeight: '550px', // Adjust the maximum height here
         overflow: 'hidden',
-        position: 'relative'
+    };
+
+    const headingStyle = {
+        position: 'absolute',
+        left: '4%', // Adjust the left position as needed
+        bottom: '80%', // Adjust the bottom position as needed
+        transform: 'translateY(50%)', // Center vertically
+       
+        
+       
+    };
+    const paragraphStyle ={
+        position: 'absolute',
+        left: '4%', // Adjust the left position as needed
+        bottom: '55%', // Adjust the bottom position as needed
+        transform: 'translateY(50%)', // Center vertically
+        fontSize: '10px',
+        
+        
+    };
+
+    const buttonStyle = {
+        position: 'absolute',
+        bottom: '-10%', // Adjust the vertical position of the button
+        left: '1%', // Center the button horizontally
+        transform: 'translateY(50%)', // Center the button horizontally
+        
     };
 
     return (
         <div style={containerStyle}>
             <img src={header} alt="Your image" style={imageStyle} />
-            <div className="absolute top-0 left-0 text-white text-left p-5 md:p-10">
-                <div className="max-w-[45%]">
-                    <h1 className={`text-xl sm:text-2xl md:text-4xl font-bold text-emerald-500 mb-4 sm:w-30vw md:w-30vw lg:w-30vw xl:w-30vw ${windowWidth <= 450 ? 'mt-[-15%] sm:mt-[-7%]' : ''} ${windowWidth > 768 ? 'lg:text-5xl' : ''}`}>
-                        Alcanza tu mejor versión
-                    </h1>
-                </div>
-                <div className={`mb-4 max-w-[35%] overflow-hidden ${windowWidth <= 450 ? 'mt-[-5%] sm:mt-[-3%]' : ''}`}>
-                    <p className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-lg text-gray-700 leading-[1.2] sm:text-xs">
-                        ¿Listo para superarte? Descubre cómo alcanzar tu máximo potencial{' '}
-                        y lograr tus objetivos.
+            <div style={headingStyle}>
+                <h1 className="text-emerald-500 text-lg sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl xl:mb-6  font-bold mb-4" style={{ lineHeight: '1' }}> {/* Adjust line height here */}
+                    <span>Alcanza tu</span>
+                    <br />
+                    <span>mejor versión</span>
+                </h1>
+            </div>
+            <div style={paragraphStyle}>
+                <p className="text-gray-800 sm:text-sm  md:text-xl lg:text-2xl lg:ml-6 xl:text-2xl mb-6 xl:ml-12  ">
+                    <span>¿Listo para superarte?</span>
+                    <br />
+                    <span>Descubre cómo alcanzar </span>
+                    <br />
+                    <span>tu máximo potencial</span>
+                    <br />
+                    <span>y lograr tus objetivos.</span>
                     </p>
-                </div>
-                <button style={{ ...buttonPosition, marginBottom: windowWidth <= 450 ? '30px' : '0' }} className="bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2 px-4 sm:py-3 sm:px-6 md:py-3 md:px-8 lg:py-4 lg:px-10 xl:py-5 xl:px-12 rounded text-xs sm:text-sm lg:text-lg">
-                    Empezar ahora
-                </button>
+                <button className="  text-xs md:text-sm xl:text-2xl xl:ml-14 xl:mt-20  xl:px-8 lg:ml-14 sm:ml-12 lg:text-2xl md:ml-14 bg-emerald-500  hover:bg-emerald-700 text-white font-bold py-2 px-2 rounded" style={buttonStyle}>Comenzar ahora</button>
             </div>
         </div>
     );
