@@ -66,7 +66,7 @@ const Header = () => {
                     <br />
                     <span>y lograr tus objetivos.</span>
                     </p>
-                <button className="  text-xs md:text-sm xl:text-2xl xl:ml-14  xl:px-8 lg:ml-14 sm:ml-12 lg:text-2xl md:ml-14 bg-emerald-500  hover:bg-emerald-700 text-white font-bold py-2 px-2 rounded" style={buttonStyle}>Comenzar ahora</button>
+                <button className="  text-xs md:text-sm xl:text-2xl xl:ml-14  xl:px-8 lg:ml-14 sm:ml-12 lg:text-2xl md:ml-14 bg-emerald-500  hover:bg-emerald-700 text-white font-bold py-2 px-2 rounded-full" style={buttonStyle}>Comenzar ahora</button>
             </div>
         </div>
     );

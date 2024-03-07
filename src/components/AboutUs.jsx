@@ -30,7 +30,7 @@ const AboutUs = () => {
             <span className="text-[#216651]"> motivaciones de fitness</span>
           </h1>
           
-          <p className="leading-relaxed mb-8 text-black font-normal text-2xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <p className="leading-relaxed mb-8 text-black font-normal text-2xl">Nuestro equipo está formado por entrenadores altamente cualificados y certificados, comprometidos a brindarte la mejor experiencia de entrenamiento posible. Estamos aquí para guiarte en cada paso del camino, desde establecer objetivos realistas hasta superar tus propios límites.</p>
           
           <ul  className="leading-loose text-black text-xl md:mb-6">
             <li className='flex items-center font-bold text-black' >< FaCheck className="text-[#216651] mr-2"/>Mas de 20 años de experiencia</li>

@@ -9,6 +9,7 @@ import Nosotros from "./Nosotros";
 import AboutUs from "./AboutUs";
 import Result from "./Result";
 import Plans from "./Plans";
+import Recetas from "./Recetas";
 
 
 const Home =  () => {
@@ -20,6 +21,7 @@ const Home =  () => {
       <AboutUs/>
       <Service/>
       <Result/>
+      <Recetas/>
       <Testimonios/>
       <Plans/>
       <Contacto/>

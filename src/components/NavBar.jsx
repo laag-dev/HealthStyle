@@ -52,14 +52,21 @@ const NavBar = () => {
             Servicios
           </a>
           <a className="mt-1 block px-2 text-white font-semibold rounded hover:bg-emerald-400" href="#">
-            Planes
+            Nosotros
           </a>
           <a className="mt-1 block px-2 text-white font-semibold rounded hover:bg-emerald-400" href="#">
-            Testimonios
+            Recetas
+          </a>
+           <a className="mt-1 block px-2 text-white font-semibold rounded hover:bg-emerald-400" href="#">
+          Testimonios
+          </a>
+          <a className="mt-1 block px-2 text-white font-semibold rounded hover:bg-emerald-400" href="#">
+            Planes
           </a>
           <a className="mt-1 block px-2 text-white font-semibold rounded hover:bg-emerald-400" href="#">
             Contacto
           </a>
+         
         </div>
       )}
       {/* Always render links when the screen size is above the sm breakpoint */}
@@ -71,14 +78,21 @@ const NavBar = () => {
           Servicios
         </a>
         <a className="mt-1 block px-2 text-white font-semibold rounded hover:bg-emerald-400 sm:mt-0 sm:ml-2" href="#">
-          Planes
+          Nosotros
+        </a>
+        <a className="mt-1 block px-2 text-white font-semibold rounded hover:bg-emerald-400 sm:mt-0 sm:ml-2" href="#">
+          Recetas
         </a>
         <a className="mt-1 block px-2 text-white font-semibold rounded hover:bg-emerald-400 sm:mt-0 sm:ml-2" href="#">
           Testimonios
         </a>
         <a className="mt-1 block px-2 text-white font-semibold rounded hover:bg-emerald-400 sm:mt-0 sm:ml-2" href="#">
+          Planes
+        </a>
+        <a className="mt-1 block px-2 text-white font-semibold rounded hover:bg-emerald-400 sm:mt-0 sm:ml-2" href="#">
           Contacto
         </a>
+        
         
       </div>
       {/* Move cart and ingresar buttons here */}

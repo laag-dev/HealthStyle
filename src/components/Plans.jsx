@@ -32,7 +32,7 @@ function Plans() {
 
   const emptyCart = () => {
     setCart([]); // Vaciar el carrito estableciendo el estado a un array vacío
-    setMessage(""); // Limpiar el mensaje
+
   };
 
   return (
