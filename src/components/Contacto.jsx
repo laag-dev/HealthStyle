@@ -2,12 +2,9 @@ import React, {useState} from "react";
 import emailjs from 'emailjs-com';
 import Swal from "sweetalert2";
 import { FaPhoneVolume, FaLocationDot, FaEnvelope } from "react-icons/fa6"
-import { Ripple, initTE } from "tw-elements";
 import { validation } from "./validation.js";
 
 const Contacto = () => {
-  
-  initTE({ Ripple });
   
   const [errors, setErrors] = useState({ })
   const [input, setInput] = useState({
@@ -18,7 +15,6 @@ const Contacto = () => {
     phone: "",
     message: "",
   });
-
 
   const handleChange = (e) => {
     setInput({
