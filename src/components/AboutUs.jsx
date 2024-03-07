@@ -26,13 +26,13 @@ const AboutUs = () => {
         </div>
 
         <div className="w-[90%] mx-auto text-left  ">
-          <h1 className="xs:text-3xl xl:text-4xl font-bold mt-8 mb-8 uppercase leading-normal"> Brindamos entrenamiento y las mejores 
+          <h1 className="xs:text-3xl xl:text-3xl font-bold mt-8 mb-8 uppercase leading-normal"> Brindamos entrenamiento y las mejores 
             <span className="text-[#216651]"> motivaciones de fitness</span>
           </h1>
           
-          <p className="leading-relaxed mb-8 text-black font-normal text-2xl">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <p className="leading-relaxed mb-8 text-black font-normal xl:text-md">Entrenamiento y Nutrición 100% enfocado en un objetivo específico, dirigido por profesionales que se encargarán de confeccionar un programa diseñado especialmente para ti...</p>
           
-          <ul  className="leading-loose text-black text-xl md:mb-6">
+          <ul  className="leading-loose text-black text-md md:mb-6">
             <li className='flex items-center font-bold text-black' >< FaCheck className="text-[#216651] mr-2"/>Mas de 20 años de experiencia</li>
             <li className='flex items-center font-bold text-black' >< FaCheck className="text-[#216651] mr-2"/>Entrenadores Certificados</li>
             <li className='flex items-center font-bold text-black' >< FaCheck className="text-[#216651] mr-2"/>Calidad de trabajo excepcional</li>
