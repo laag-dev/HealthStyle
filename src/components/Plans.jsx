@@ -10,7 +10,7 @@ const Planes = ({titulo, precio, plan, loren,boton}) => {
       <h3 className=' text-[15px] m-2.5 '>{titulo}</h3>
       <span className='text-[45px] font-bold '>{precio }</span>
       <h3 className='text-[30px]'>{plan }</h3>
-      <p className='text-center text-[15px]'>{loren || 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo tempora nisi'}</p>
+      <p className='text-center text-[12px]'>{loren }</p>
       <button className='bg-[red] hover:bg-black rounded-md w-[100px] h-[30px] m-4 '  >{boton}</button>
 
     </div>
@@ -31,14 +31,14 @@ function Plans() {
             </h3>
             <h3 className="text-5xl font-bold py-8 mb-4">
                CHOOSE YOUR
-                <span className="text-[#216651]"> PRICING</span>
+                <span className="text-[#216651]"> BEST</span>
                 <span className="text-5xl font-bold py-8 mb-4"> PRICING</span>
             </h3>
       </div>
       <div className='Plans flex-wrap flex flex-row justify-center gap-3 mb-[50px] md:flex-row  sm:content-center'>  
-              <Planes titulo= "Billed per month"  precio="$25" plan="Beginners" boton="Join Now" />
-              <Planes titulo= "Billed per month"  precio="$49" plan="Basic"boton="Join Now" />
-              <Planes titulo= "Billed per month"  precio="$99" plan="Advanced" boton="Join Now" />
+              <Planes titulo= "Billed per month"  precio="$25" plan="Beginners" loren="Nuestro Plan Beginners te brinda acceso a instalaciones y clases grupales con orientación personalizada para alcanzar tus metas de fitness." boton="Join Now" />
+              <Planes titulo= "Billed per month"  precio="$49" plan="Basic" loren="En el Plan Intermedio, obtienes planes de nutrición personalizados para perder grasa o ganar músculo, junto con todos los beneficios del Plan Beginners." boton="Join Now" />
+              <Planes titulo= "Billed per month"  precio="$99" plan="Advanced" loren ="Nuestro Plan Avanzado ofrece seguimiento continuo para ajustar tu entrenamiento y nutrición, asegurando resultados óptimos en tu camino hacia tus metas de fitness." boton="Join Now" />
       </div>
     </div>
   
