@@ -11,6 +11,8 @@ import AboutUs from "./AboutUs";
 import Result from "./Result";
 import Plans from "./Plans";
 import logochatbot from "../assets/chatbot.png";
+import Recetas from "./Recetas";
+
 
 const Home =  () => {
   
@@ -41,6 +43,7 @@ const Home =  () => {
       <AboutUs/>
       <Service/>
       <Result/>
+      <Recetas/>
       <Testimonios/>
       <Plans/>
       <Contacto/>

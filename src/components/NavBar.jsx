@@ -28,7 +28,7 @@ const NavBar = () => {
     <header className="bg-emerald-500 sm:flex sm:justify-between sm:px-4 sm:py-3 sm:items-center">
       <div className="flex items-center justify-between px-4 py-3 sm:p-0" >
         <div>
-          <img className="h-14 pl-8" src={logo} alt="Healthstyle"></img>
+          <img className="h-12 pl-8" src={logo} alt="Healthstyle"></img>
         </div>
         <div className="sm:hidden">
           <button type="button" onClick={toggleMenu}>
@@ -52,14 +52,21 @@ const NavBar = () => {
             Servicios
           </a>
           <a className="mt-1 block px-2 text-white font-semibold rounded hover:bg-emerald-400" href="#">
-            Planes
+            Nosotros
           </a>
           <a className="mt-1 block px-2 text-white font-semibold rounded hover:bg-emerald-400" href="#">
-            Testimonios
+            Recetas
+          </a>
+           <a className="mt-1 block px-2 text-white font-semibold rounded hover:bg-emerald-400" href="#">
+          Testimonios
+          </a>
+          <a className="mt-1 block px-2 text-white font-semibold rounded hover:bg-emerald-400" href="#">
+            Planes
           </a>
           <a className="mt-1 block px-2 text-white font-semibold rounded hover:bg-emerald-400" href="#">
             Contacto
           </a>
+         
         </div>
       )}
       {/* Always render links when the screen size is above the sm breakpoint */}
@@ -71,21 +78,25 @@ const NavBar = () => {
           Servicios
         </a>
         <a className="mt-1 block px-2 text-white font-semibold rounded hover:bg-emerald-400 sm:mt-0 sm:ml-2" href="#">
-          Planes
+          Nosotros
+        </a>
+        <a className="mt-1 block px-2 text-white font-semibold rounded hover:bg-emerald-400 sm:mt-0 sm:ml-2" href="#">
+          Recetas
         </a>
         <a className="mt-1 block px-2 text-white font-semibold rounded hover:bg-emerald-400 sm:mt-0 sm:ml-2" href="#">
           Testimonios
         </a>
         <a className="mt-1 block px-2 text-white font-semibold rounded hover:bg-emerald-400 sm:mt-0 sm:ml-2" href="#">
+          Planes
+        </a>
+        <a className="mt-1 block px-2 text-white font-semibold rounded hover:bg-emerald-400 sm:mt-0 sm:ml-2" href="#">
           Contacto
         </a>
+        
         
       </div>
       {/* Move cart and ingresar buttons here */}
       <div className="hidden sm:flex">
-      <button className="relative">
-  <img className="h-6 transition duration-300 transform hover:scale-110" src="src\assets\cart-shopping-solid.svg" alt="" />
-</button>
         <button className="text-white font-bold ml-8 mr-8 border-solid border-2 rounded-2xl p-2 hover:bg-emerald-400">Ingresar</button>
       </div>
     </header>
@@ -93,3 +104,4 @@ const NavBar = () => {
 };
 
 export default NavBar;
+
