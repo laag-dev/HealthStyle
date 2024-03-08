@@ -26,7 +26,7 @@ const Planes = ({ titulo, precio, plan, boton, addToCart, message, setMessage, s
   };
 
   return (
-    <div className='planes bg-[black] h-[320px] w-[250px] text-[white] rounded-[20px] hover:bg-[#216651]'>
+    <div className='planes bg-[black] h-[320px] w-[250px] text-[white] rounded-[20px] hover:bg-[#216651] text-center'>
       <h3 className='text-[15px] m-2.5'>{titulo}</h3>
       <span className='text-[45px] font-bold'>{precio}</span>
       <h3 className='text-[26px]'>{plan}</h3>
@@ -60,7 +60,7 @@ function Plans() {
   };
 
   return (
-    <div id="costosLink" className="flex flex-col bg-gradient-to-r from-gray-100 to-gray-400 ">
+    <div id="costosLink" className="flex flex-col bg-gradient-to-r from-gray-100 to-gray-400 text-center ">
       <div className="mx-auto px-8 text-center">
         <h3 className="text-lg font-bold mb-4 relative mt-[40px]">
         Costo de nuestros planes

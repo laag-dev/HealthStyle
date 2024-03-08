@@ -1,3 +1,4 @@
+// App.js
 import React, { useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Home from './components/Home';
@@ -7,7 +8,6 @@ import { AuthProvider } from './context/AuthContext';
 import UserLogin from './components/UserLogin';
 import UserRegistration from './components/UserRegistration';
 import NavBar from './components/NavBar';
-
 
 function App() {
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
@@ -31,18 +31,23 @@ function App() {
 
   return (
     <AuthProvider>
-    <div className="App">    
-      <Routes>
+      <div className="App">    
+        <Routes>
           <Route path="/login" element={<UserLogin isOpenL={isLoginModalOpen} onCloseL={closeLoginModal} />} />
           <Route path="/registration" element={<UserRegistration isOpen={isRegistrationModalOpen} onClose={closeRegistrationModal} />} />
-        <Route exact path='/' element={<Home />} />
-        <Route path='/contacto' element={<Contacto />} />
-        <Route path='/service' element={<Service/>} />
-      </Routes> 
-      <NavBar openLoginModal={openLoginModal} openRegistrationModal={openRegistrationModal} />
+          <Route exact path='/' element={<Home />} />
+          <Route path='/contacto' element={<Contacto />} />
+          <Route path='/service' element={<Service/>} />
+        </Routes> 
+        <NavBar 
+          openLoginModal={openLoginModal} 
+          openRegistrationModal={openRegistrationModal} 
+          isLoginModalOpen={isLoginModalOpen}
+          isRegistrationModalOpen={isRegistrationModalOpen}
+        />
       </div>
-      </AuthProvider>
+    </AuthProvider>
   )
 }
 
-export default App
+export default App;

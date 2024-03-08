@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import burgerMenu from "../assets/burgerMenu.svg";
 import logo from  "../assets/1.svg";
 
-const NavBar = ({ openLoginModal, openRegistrationModal }) => {
+const NavBar = ({ openLoginModal, openRegistrationModal, isLoginModalOpen, isRegistrationModalOpen }) => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
