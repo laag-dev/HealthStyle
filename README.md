@@ -14,7 +14,7 @@ Nuestro proyecto consiste en una plataforma diseñada para ayudarte a alcanzar t
 ### Back-end
 
 - ![Node.js][Node.js]
-
+- ![Firebase]![Firebase]
 
 ## Características
 
@@ -26,8 +26,8 @@ Nuestro proyecto consiste en una plataforma diseñada para ayudarte a alcanzar t
 
 ## Roles
 - Ignacio Cornejo: Diseño UI & Desarrollador Frontend
-- Claudio Carruz: Desarrollador Backend
-- Lina Ascanio : Desarrollador Backend
+- Claudio Carruz: Desarrollador Fullstack
+- Lina Ascanio : Desarrollador Fullstack
 - Cesar Marca Nuñez: Diseño UI & Desarrollador Frontend
 - Wellington Crespo: Diseño UI & Desarrollador Frontend
 
