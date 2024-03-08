@@ -3,6 +3,7 @@ import imagenLina from "../assets/Lina.jpg"
 import imagenIgnacio from "../assets/Ignacio.jpg"
 import imagenCesar from "../assets/Cesar.jpg"
 import imagenClaudio from "../assets/Claudio.jpg"
+import imagenWellington from "../assets/wellington.jpg";
 
 const Nosotros = () => {
 
@@ -99,7 +100,7 @@ const Nosotros = () => {
         <div className="mb-12 lg:mb-0"> {/* -- Contenedor individual de cada desarrollador -- */}
           
           <img className="mx-auto mb-4 rounded-lg shadow-md shadow-gray-500 w-[150px] h-[150px]" 
-            src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(9).jpg" alt="avatar"
+            src={imagenWellington} alt="avatar"
           />
           <h5 className="mb-2 text-lg text-white font-bold">Wellington Crespo</h5>
           <p className="mb-5 text-white">Frontend Developer</p>
