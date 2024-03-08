@@ -13,7 +13,7 @@ Nuestro proyecto consiste en una plataforma diseñada para ayudarte a alcanzar t
 
 ### Back-end
 
-- ![Node.js][Express.js]
+- ![Node.js][Node.js]
 
 
 ## Características
