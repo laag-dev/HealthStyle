@@ -64,7 +64,7 @@ function Plans() {
       <div className="mx-auto px-8 text-center">
         <h3 className="text-lg font-bold mb-4 relative mt-[40px]">
         Costo de nuestros planes
-          <div className="absolute bottom-[-20%] pt-1 mt-20 transform -translate-x-1/2 h-0.5 bg-[#216651] w-72"></div>
+          <div className="absolute bottom-[-20%] pt-1 mt-20 left-1/2 transform -translate-x-1/2 h-0.5 bg-[#216651] w-72"></div>
         </h3>
         <h3 className="text-4xl font-bold py-8 mb-4">
           ELEGI  UNO DE NUESTROS

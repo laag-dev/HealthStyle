@@ -1,6 +1,6 @@
 import React from 'react';
-import ChatBot from 'react-simple-chatbot'
-import { ThemeProvider } from 'styled-components'
+//import ChatBot from 'react-simple-chatbot'
+//import { ThemeProvider } from 'styled-components'
 // import WikipediaSearch from '../WikipediaSearch/WikipediaSearch'
 
 
