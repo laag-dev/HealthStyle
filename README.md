@@ -1,8 +1,39 @@
-# React + Vite
+# Healthstyle
+![imagen del Proyecto](/public/readmeImg.PNG)
+## Sobre el proyecto
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Nuestro proyecto consiste en una plataforma diseñada para ayudarte a alcanzar tus metas de fitness de manera personalizada. A través de esta plataforma, podrás acceder a planes de entrenamiento y nutrición adaptados específicamente a tus necesidades y objetivos.
 
-Currently, two official plugins are available:
+## Tecnologías
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Front-end
+
+- ![React.js][react.js]
+- ![TailwindCSS][TailwindCSS]
+
+### Back-end
+
+- ![Node.js][Express.js]
+
+
+## Características
+
+- Login
+- Creación de cuenta de un usuario
+- Compra de Planes
+- Contacto por Whatsapp
+- Bot Informativo
+
+## Roles
+- Ignacio Cornejo: Diseño UI & Desarrollador Frontend
+- Claudio Carruz: Desarrollador Backend
+- Lina Ascanio : Desarrollador Backend
+- Cesar Marca Nuñez: Diseño UI & Desarrollador Frontend
+- Wellington Crespo: Diseño UI & Desarrollador Frontend
+
+## Deploy
+https://health-style.vercel.app/
+
+[react.js]: https://img.shields.io/badge/react.js-61DAFB?style=for-the-badge&logo=react&logoColor=white
+[TailwindCSS]: https://img.shields.io/badge/tailwindcss-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white
+[Node.js]: https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white
