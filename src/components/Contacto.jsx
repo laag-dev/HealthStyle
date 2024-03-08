@@ -62,7 +62,7 @@ const Contacto = () => {
     Swal.fire({
       icon: "success",
       title: "Enviado",
-      confirmButtonColor: "rgb(94 195 191)",
+      confirmButtonColor: "rgb(33 102 81)",
       text: `${message}`,
     });
   };
@@ -82,7 +82,7 @@ const Contacto = () => {
   
   return (
 
-  <div id="contactoLink" className="flex flex-col md:flex-row justify-between text-black py-12 pt-8 pb-8 bg-gradient-to-r from-gray-400 to-gray-100">
+  <div id="contactoLink" className="flex flex-col md:flex-row justify-between text-black py-12 pt-2 pb-8 bg-gradient-to-r from-gray-400 to-gray-100">
     
     {/* <!-- Contenedor izquierdo --> */}
   
@@ -274,7 +274,7 @@ const Contacto = () => {
         <div className="w-[90%] mx-auto">
           <button
             type="submit"
-            className={`mb-4 mt-8 block w-full text-white font-bold py-3 px-4 rounded ${Object.values(errors).some(error => error !== "") || !inputLleno ? "bg-gray-400 cursor-not-allowed" : "bg-[#216651] hover:bg-[#3E9278]"}`}
+            className={`mb-4 mt-8 block w-full text-white font-bold py-3 px-4 rounded-full ${Object.values(errors).some(error => error !== "") || !inputLleno ? "bg-gray-600 cursor-not-allowed" : "bg-[#216651] hover:bg-[#3E9278] hover:text-black"}`}
             disabled={Object.values(errors).some(error => error !== "") || !inputLleno}
             title={Object.values(errors).some(error => error !== "") ? Object.values(errors).join(", ") : !inputLleno ? "Por favor, completa todos los campos correctamente" : ""}
             style={{

@@ -50,7 +50,7 @@ const Header = () => {
         <div style={containerStyle}>
             <img src={header} alt="Your image" style={imageStyle} />
             <div style={headingStyle}>
-                <h1 className="text-emerald-500 text-lg sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl xl:mb-6  font-bold mb-4" style={{ lineHeight: '1' }}> {/* Adjust line height here */}
+                <h1 className="text-[#216651] text-lg sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl xl:mb-6  font-bold mb-4" style={{ lineHeight: '1' }}> {/* Adjust line height here */}
                     <span>Alcanza tu</span>
                     <br />
                     <span>mejor versión</span>
@@ -66,7 +66,7 @@ const Header = () => {
                     <br />
                     <span>y lograr tus objetivos.</span>
                     </p>
-                <button className="  text-xs md:text-sm xl:text-2xl xl:ml-14  xl:px-8 lg:ml-14 sm:ml-12 lg:text-2xl md:ml-14 bg-emerald-500  hover:bg-emerald-700 text-white font-bold py-2 px-2 rounded-full" style={buttonStyle}>Comenzar ahora</button>
+                <button className="  text-xs md:text-sm xl:text-2xl xl:ml-14  xl:px-8 lg:ml-14 sm:ml-12 lg:text-2xl md:ml-14 bg-[#216651]  hover:bg-gray-400 text-white font-bold py-2 px-2 rounded-full" style={buttonStyle}>Comenzar ahora</button>
             </div>
         </div>
     );
