@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import burgerMenu from "../assets/burgerMenu.svg";
 import logo from  "../assets/1.svg";
 
-const NavBar = () => {
+const NavBar = ({ openLoginModal, openRegistrationModal }) => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -102,9 +102,8 @@ const NavBar = () => {
       {/* Move cart and ingresar buttons here */}
       <div className="hidden lg:flex">
         <button className="relative">
-          <img className="h-6 transition duration-300 transform hover:scale-110" src="src\assets\cart-shopping-solid.svg" alt="" />
-        </button>
-        <button className="text-white font-bold ml-8 mr-8 border-solid border-2 rounded-2xl p-2 hover:bg-gray-400">Ingresar</button>
+        <button className="text-white font-bold ml-8 mr-8 border-solid border-2 rounded-2xl p-2 hover:bg-gray-400" onClick={openLoginModal}>Ingresar</button>        </button>
+        <button className="text-white font-bold ml-8 mr-8 border-solid border-2 rounded-2xl p-2 hover:bg-gray-400" onClick={openRegistrationModal}>Registro</button>
       </div>
     </header>
   );
