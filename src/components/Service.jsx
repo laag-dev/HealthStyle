@@ -5,15 +5,15 @@ import service3 from "../assets/Service3.jpeg";
 
 export const Service = () => {
   return (
-    <div  id="serviciosLink"    className="bg-[#D1E1D4] py-6 min-h-screen relative pt-28">
+    <div  id="serviciosLink"    className="bg-gradient-to-r from-gray-100 to-gray-300 py-6 min-h-screen relative pt-12">
     <div className="container mx-auto px-8 text-center">
-      <h3 id="serviciosLink" className="text-lg font-bold mb-4 relative">
+      <h3 id="serviciosLink" className="text-2xl font-bold mb-8 relative">
         Que ofrecemos
-        <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 h-0.5 bg-[#216651] w-40"></div>
+        <div className="absolute bottom-[-20%] pt-1 mt-20 left-1/2 transform -translate-x-1/2 h-0.5 bg-[#216651] w-48"></div>
       </h3>
-      <h1 className="text-5xl font-bold py-8 mb-4">
-        Nuestros
-        <span className="text-[#216651]"> Servicios</span>
+      <h1 className="text-3xl font-bold py-6 mb-0">
+        NUESTROS
+        <span className="text-[#216651]"> SERVICIOS</span>
       </h1>
     </div>
 

@@ -1,61 +1,72 @@
-import React, { useState, useEffect } from 'react';
-import header from "../assets/header.jpg"
+import React from 'react';
+import header from "../assets/header.jpg";
+
+
+
 
 const Header = () => {
-    const [fontSize, setFontSize] = useState('4.5vw'); // Initial font size for responsive text
-    const [buttonFontSize, setButtonFontSize] = useState('2.5vw'); // Initial font size for button
-    const [textPosition, setTextPosition] = useState({ top: '30px', left: '10%' }); // Initial text position
 
-    useEffect(() => {
-        const handleResize = () => {
-            const windowWidth = window.innerWidth;
-            
-            // Adjust font size and text position based on window width
-            if (windowWidth <= 1010) {
-                const baseFontSize = 4.5; // Base font size in vw
-                const baseButtonFontSize = 2.5; // Base button font size in vw
-                
-                // Calculate font size and button font size
-                const calculatedFontSize = baseFontSize - (0.002 * (1010 - windowWidth)); // Adjust font size for smaller screens
-                const calculatedButtonFontSize = baseButtonFontSize - (0.002 * (1010 - windowWidth)); // Adjust button font size for smaller screens
-                
-                setFontSize(`calc(${calculatedFontSize}vw - 0.1vw)`); // Set the calculated font size for the text elements
-                setButtonFontSize(`calc(${calculatedButtonFontSize}vw - 0.1vw)`); // Set the calculated button font size
-                setTextPosition({ top: '30px', left: '5%' }); // Adjust text position for smaller screens
-            } else if (windowWidth >= 768) {
-                setFontSize('3rem'); // Adjust font size for medium screens
-                setButtonFontSize('1.75rem'); // Adjust button font size for medium screens
-                setTextPosition({ top: '20px', left: '5%' }); // Adjust text position for medium screens
-            } else {
-                setFontSize('2.5rem'); // Adjust font size for larger screens
-                setButtonFontSize('1.5rem'); // Adjust button font size for larger screens
-                setTextPosition({ top: '10px', left: '2%' }); // Adjust text position for larger screens
-            }
-        };
+    const imageStyle = {
+        objectFit: 'cover',
+        objectPosition: 'center bottom',
+        width: '100%',
+        height: 'auto'
+    };
 
-        // Call handleResize initially
-        handleResize();
+    const containerStyle = {
+        position: 'relative',
+        maxHeight: '550px', // Adjust the maximum height here
+        overflow: 'hidden',
+    };
 
-        // Add event listener for window resize
-        window.addEventListener('resize', handleResize);
+    const headingStyle = {
+        position: 'absolute',
+        left: '4%', // Adjust the left position as needed
+        bottom: '80%', // Adjust the bottom position as needed
+        transform: 'translateY(50%)', // Center vertically
+       
+        
+       
+    };
+    const paragraphStyle ={
+        position: 'absolute',
+        left: '4%', // Adjust the left position as needed
+        bottom: '55%', // Adjust the bottom position as needed
+        transform: 'translateY(50%)', // Center vertically
+        fontSize: '10px',
+        
+        
+    };
 
-        // Cleanup function to remove event listener
-        return () => {
-            window.removeEventListener('resize', handleResize);
-        };
-    }, []); // Empty dependency array ensures that effect runs only once on component mount
+    const buttonStyle = {
+        position: 'absolute',
+        bottom: '-10%', // Adjust the vertical position of the button
+        left: '1%', // Center the button horizontally
+        transform: 'translateY(50%)', // Center the button horizontally
+        
+    };
 
     return (
-        <div style={{ position: 'relative', height: '600px' }} className="w-full">
-            <img src={header} alt="Your image" className="w-full object-scale-down" />
-            <div className="absolute" style={{ ...textPosition, color: 'white', textAlign: 'center' }}>
-                <div>
-                    <h1 style={{ fontSize }} className="font-bold text-emerald-500">Alcanza tu</h1>
-                    <h1 style={{ fontSize }} className="font-bold text-emerald-500">mejor versión</h1>
-                    <button style={{ fontSize: buttonFontSize }} className="bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-4 px-8 rounded mt-8">
-                        Empezar ahora
-                    </button>
-                </div>
+        <div style={containerStyle}>
+            <img src={header} alt="Your image" style={imageStyle} />
+            <div style={headingStyle}>
+                <h1 className="text-[#216651] text-lg sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl xl:mb-6  font-bold mb-4" style={{ lineHeight: '1' }}> {/* Adjust line height here */}
+                    <span>Alcanza tu</span>
+                    <br />
+                    <span>mejor versión</span>
+                </h1>
+            </div>
+            <div style={paragraphStyle}>
+                <p className="text-gray-800 sm:text-sm sm:ml-6  md:text-xl md:ml-1 lg:text-2xl lg:ml-6 xl:text-2xl mb-6 xl:ml-12  ">
+                    <span>¿Listo para superarte?</span>
+                    <br />
+                    <span>Descubre cómo alcanzar </span>
+                    <br />
+                    <span>tu máximo potencial</span>
+                    <br />
+                    <span>y lograr tus objetivos.</span>
+                    </p>
+                <button className="  text-xs md:text-sm xl:text-2xl xl:ml-14  xl:px-8 lg:ml-14 sm:ml-12 lg:text-2xl md:ml-14 bg-[#216651]  hover:bg-gray-400 text-white font-bold py-2 px-2 rounded-full" style={buttonStyle}>Comenzar ahora</button>
             </div>
         </div>
     );
