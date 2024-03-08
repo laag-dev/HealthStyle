@@ -4,7 +4,7 @@ import ImgDespues from '../assets/despues.jpg';
 
 const Result = () => {
   return (
-    <div className="flex flex-col lg:flex-row justify-between items-start p-4 lg:p-20">
+    <div id='resultadosLink' className="flex flex-col lg:flex-row justify-between items-start p-4 lg:p-20">
       <div className="bg-white lg:ml-6 lg:mr-4 w-full lg:w-1/2 pr-0 lg:pr-4">
         <div className="flex items-center mb-4">
           <p className="text-2xl font-bold mr-4 ml-2">Resultados</p>

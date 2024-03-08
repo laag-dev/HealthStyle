@@ -4,7 +4,7 @@ import imagenLarge from "../assets/receta1.jpg";
 
 const Recetas = () => {
     return (
-        <div className='flex flex-col items-center space-y-4 text-left px-4 py-12'>
+        <div id='recetasLink' className='flex flex-col items-center space-y-4 text-left px-4 py-12'>
             <div>
                 <h1 className='text-2xl lg:text-4xl text-green-600 font-bold'>Consegui recetas personalizadas para vos</h1>
             </div>
