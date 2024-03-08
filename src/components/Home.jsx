@@ -12,7 +12,7 @@ import Result from "./Result";
 import Plans from "./Plans";
 import logochatbot from "../assets/chatbot.png";
 import Recetas from "./Recetas";
-
+import Chatbot from "./Chatbot";
 
 const Home =  () => {
   
@@ -30,7 +30,7 @@ const Home =  () => {
   const handleClosePopUp = (e) => {
     e.preventDefault();
     setPopUpOpen(false);
-    console.log("popUpClose:", e);
+    console.log("Pop up cerrado:", e);
   };  
 
   
@@ -94,10 +94,10 @@ const Home =  () => {
                   X
                 </button>
             </div>
-                        
+            <Chatbot />   
             {/* form de chatbot */}
-            <div className='p-6 relative w-full h-full'>
-            </div>
+            {/* <div className='p-6 relative w-full h-full'>
+            </div> */}
         </div>    
     </div>
     )}   

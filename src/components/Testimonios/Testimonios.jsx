@@ -37,8 +37,8 @@ const Testimonios = () => {
   };
 
   return (
-    <div id="testimonioLink" className="bg-gray-100 py-12">
-      <h1 className='text-4xl text-[#216651] font-bold mb-10 md:mb-0 text-center'>Testimonios</h1>
+    <div id="testimonioLink" className="bg-gradient-to-r from-gray-400 to-gray-100 py-12">
+      <h1 className='text-3xl text-[#216651] font-bold mb-10 md:mb-0 text-center uppercase'>Testimonios</h1>
       <div className="max-w-screen-lg mx-auto px-4"> 
         <Slider {...settings}>
           {testimonios.map((testimonio, index) => (
