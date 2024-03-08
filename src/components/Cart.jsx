@@ -25,10 +25,10 @@ const Cart = ({ cart, emptyCart }) => {
       <div className="mt-8 lg:mt-0 lg:self-end">
         <p className="text-2xl mb-2  font-bold">Total: ${calculateTotal()}</p>
         <div className="text-left mt-4 lg:mt-0">
-          <button onClick={emptyCart} className="bg-[#74BAA0] hover:bg-[#D1E1D4] text-white font-bold py-2 px-4 lg:py-3 lg:px-6 rounded-full mb-4 lg:mb-0 inline-block w-full lg:w-auto">
+          <button onClick={emptyCart} className="bg-[#74BAA0] hover:bg-[#D1E1D4] text-white font-bold py-2 px-4 lg:py-3 lg:px-6 rounded-full mb-4 lg:mb-0 inline-block w-full lg:w-auto mr-3">
             Vaciar Carrito
           </button>
-          <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" className="bg-[#74BAA0] hover:bg-[#D1E1D4] text-white text-center font-bold py-2 ml-2 px-4 lg:py-3  lg:px-6 rounded-full inline-block w-full lg:w-auto">
+          <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" className="bg-[#74BAA0] hover:bg-[#D1E1D4] text-white text-center font-bold py-2 ml-2 px-4 lg:py-3  lg:px-6 rounded-full inline-block w-full lg:w-auto xsm:ml-0">
             Comprar en WhatsApp
           </a>
         </div>
