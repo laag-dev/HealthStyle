@@ -14,7 +14,6 @@ Nuestro proyecto consiste en una plataforma diseñada para ayudarte a alcanzar t
 ### Back-end
 
 - ![Node.js][Node.js]
-- ![Firebase]![Firebase]
 
 ## Características
 
