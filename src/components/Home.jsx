@@ -38,7 +38,7 @@ const Home =  () => {
   return (
     <>
     <div >
-      <NavBar/>
+      {/* <NavBar/> */}
       <Header/>
       <AboutUs/>
       <Service/>

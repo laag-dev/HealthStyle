@@ -34,7 +34,7 @@ const Footer = () => {
       </div>
    
       <div className="w-full p-3 bg-gray-900 lg:text-lg xs:text-xs">
-        <p className="items-center text-white">&copy; 2024 HealthStyle | Todos los derechos reservados</p>
+        <p className="items-center text-center text-white">&copy; 2024 HealthStyle | Todos los derechos reservados</p>
       </div>
       
     </div> 
