@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Healthstyle
 ![imagen del Proyecto](/public/readmeImg.PNG)
 ## Sobre el proyecto
@@ -37,3 +38,6 @@ https://health-style.vercel.app/
 [react.js]: https://img.shields.io/badge/react.js-61DAFB?style=for-the-badge&logo=react&logoColor=white
 [TailwindCSS]: https://img.shields.io/badge/tailwindcss-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white
 [Node.js]: https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white
+=======
+# HealthStyle
+>>>>>>> d7da0796a6f1008e437fad866aa0da3abd11b543
