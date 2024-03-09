@@ -81,13 +81,13 @@ import { useAuth } from "../context/AuthContext";
           />
         </div>
         <div>
-          <h4 className="text-[#AF8970]">
+          <h4 className="text-white">
             Mínimo 6 caracteres con al menos una mayúscula
           </h4>
         </div>
         <button
           type="submit"
-          className="w-full bg-[#AF8970] text-black hover:bg-black hover:text-white font-semibold py-2 rounded-md transition duration-300 "
+          className="w-full ml-0 mr-auto lg:mr-4 md:mr-4 lg:text-xl md:text-lg font-bold text-white rounded-full bg-[#216651] hover:bg-gray-600 px-5 py-3 "
           onClick={handleRegister}
         >
           Crear cuenta

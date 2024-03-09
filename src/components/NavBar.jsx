@@ -2,8 +2,9 @@ import "../index.css";
 import { useState, useEffect } from "react";
 import burgerMenu from "../assets/burgerMenu.svg";
 import logo from  "../assets/1.svg";
+import { Link} from "react-router-dom";
 
-const NavBar = ({ openLoginModal, openRegistrationModal, isLoginModalOpen, isRegistrationModalOpen }) => {
+const NavBar = ({ openLoginModal, openRegistrationModal }) => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -101,9 +102,11 @@ const NavBar = ({ openLoginModal, openRegistrationModal, isLoginModalOpen, isReg
       </div>
       {/* Move cart and ingresar buttons here */}
       <div className="hidden lg:flex">
-        <button className="relative">
-        <button className="text-white font-bold ml-8 mr-8 border-solid border-2 rounded-2xl p-2 hover:bg-gray-400" onClick={openLoginModal}>Ingresar</button>        </button>
-        <button className="text-white font-bold ml-8 mr-8 border-solid border-2 rounded-2xl p-2 hover:bg-gray-400" onClick={openRegistrationModal}>Registro</button>
+        
+        <a className="text-white font-bold ml-8 mr-8 border-solid border-2 rounded-2xl p-2 hover:bg-gray-400" onClick={openLoginModal}><Link to="/login">Ingresar</Link></a>
+        
+        <a className="text-white font-bold ml-8 mr-8 border-solid border-2 rounded-2xl p-2 hover:bg-gray-400" onClick={openRegistrationModal}><Link to="/registration">Registro</Link></a>
+        
       </div>
     </header>
   );

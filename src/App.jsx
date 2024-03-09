@@ -14,6 +14,7 @@ function App() {
   const [isRegistrationModalOpen, setIsRegistrationModalOpen] = useState(false);
 
   const openLoginModal = () => {
+    console.log("Abriendo modal de inicio de sesión");
     setIsLoginModalOpen(true);
   };
 
@@ -22,6 +23,7 @@ function App() {
   };
 
   const openRegistrationModal = () => {
+    console.log("Abriendo modal de registro de usuario");
     setIsRegistrationModalOpen(true);
   };
 
@@ -42,8 +44,6 @@ function App() {
         <NavBar 
           openLoginModal={openLoginModal} 
           openRegistrationModal={openRegistrationModal} 
-          isLoginModalOpen={isLoginModalOpen}
-          isRegistrationModalOpen={isRegistrationModalOpen}
         />
       </div>
     </AuthProvider>

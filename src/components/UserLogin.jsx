@@ -110,28 +110,28 @@ const UserLogin = ({ isOpenL, onCloseL }) => {
         <div className="mb-4">
           <a
             href="#"
-            className="text-sm dark:text-[#af8970] font-semibold hover:underline "
+            className="text-sm dark:text-white font-semibold hover:underline "
           >
             Olvidaste tu clave?
           </a>
         </div>
         <button
           type="submit"
-          className="w-full bg-[#AF8970] text-black hover:bg-black hover:text-white font-semibold py-2 rounded-md transition duration-300 "
+          className="w-full text-center ml-0 mr-auto lg:mr-4 md:mr-4 lg:text-xl md:text-lg font-bold text-white rounded-full bg-[#216651] hover:bg-gray-600 px-5 py-3"
           onClick={handleLogin}
         >
           Iniciar sesión
         </button>
         <button
           type="submit"
-          className="w-full bg-[#AF8970] text-black hover:bg-black hover:text-white font-semibold py-2 rounded-md transition duration-300 "
+          className="w-full ml-0 mr-auto lg:mr-4 md:mr-4 lg:text-xl md:text-lg font-bold text-white rounded-full bg-[#216651] hover:bg-gray-600 px-5 py-3"
           onClick={handleGoogle}
         >
           Iniciar con Google
         </button>
         <div className="text-sm font-medium text-gray-500 dark:text-gray-300 text-center mt-4">
           No está registrado?
-          <a className=" hover:underline dark:text-[#af8970] font-semibold">
+          <a className=" hover:underline dark:text-white font-semibold">
             Cree su cuenta
           </a>
         </div>
