@@ -14,7 +14,6 @@ Nuestro proyecto consiste en una plataforma diseñada para ayudarte a alcanzar t
 ### Back-end
 
 - ![Node.js][Node.js]
-- ![Firebase]![Firebase]
 
 ## Características
 
@@ -37,6 +36,6 @@ https://health-style.vercel.app/
 [react.js]: https://img.shields.io/badge/react.js-61DAFB?style=for-the-badge&logo=react&logoColor=white
 [TailwindCSS]: https://img.shields.io/badge/tailwindcss-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white
 [Node.js]: https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white
-=======
+
 # HealthStyle
 
