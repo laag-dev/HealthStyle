@@ -37,12 +37,8 @@ const Home =  () => {
 
   return (
     <>
-<<<<<<< HEAD
     <div >
       {/* <NavBar/> */}
-=======
-    <div>
->>>>>>> 310ab007796176d22d23284ebd12567cee297668
       <Header/>
       <AboutUs/>
       <Service/>
