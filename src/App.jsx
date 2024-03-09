@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 // App.js
+=======
+>>>>>>> 310ab007796176d22d23284ebd12567cee297668
 import React, { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import Home from "./components/Home";
@@ -64,6 +67,10 @@ function App() {
       </div>
     </AuthProvider>
   );
+<<<<<<< HEAD
 }
 
 export default App;
+=======
+}
+>>>>>>> 310ab007796176d22d23284ebd12567cee297668
