@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Healthstyle
 ![imagen del Proyecto](/public/readmeImg.PNG)
 ## Sobre el proyecto
@@ -39,3 +40,6 @@ https://health-style.vercel.app/
 
 # HealthStyle
 
+=======
+# healthStyle
+>>>>>>> 46b8ff11c5b6789014ce3f87d56e7c8089d7d1bd
